@@ -1,0 +1,9 @@
+
+<form action="/instruments/<%= @instrument.id%>" method="POST">
+<input id="hidden" type="hidden" name="_method" value ="patch"
+    <label for="instrument_type">Instrument Type: </label>
+        <input type="text" name="instrument_type" value="<%=@instrument.instrument_type%>">
+    </ul>
+
+    <input type="submit" value="Update Instruments">
+</form>

@@ -1,0 +1,10 @@
+<h1>Insert the form to edit the name of your instruments here.</h1>
+<form action="/users/<%= @user.id%>" method="POST">
+<input id="hidden" type="hidden" name="_method" value ="patch"
+<%@user.instruments.each do |t|%>
+        <input type="text" name"instrument_name" value="<%=t.instrument_type%>">
+        <%end%>
+    </ul>
+
+    <input type="submit" value="Update Instruments">
+</form>

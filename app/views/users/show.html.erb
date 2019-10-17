@@ -1,0 +1,22 @@
+<h1><%= @user.username %></h1>
+    <h3>Instruments:</h3>
+    <ul>
+        <% @user.instruments.each do |t| %>
+            <li><a href="/instruments/<%= t.id %>/edit"><%= t.instrument_type %></a>
+                <form method= "post" action= "/instruments/<%= t.id %>/delete">
+                <input id="hidden" type="hidden" name="_method" value="delete">
+                <input type="submit" value= "delete">
+                </form>
+            </li>
+            <div></div>
+        <%end%>
+    </ul>
+
+<form method="POST" action="/new_instrument">
+    <input type="text" name="instrument[type]" placeholder="Type">
+    <input type="submit" value="Add Instrument">
+</form>
+
+<form method="POST" action="/logout">
+    <input type="submit" value="Logout">
+</form>

@@ -1,0 +1,14 @@
+<h1>Welcome to My Instrument App!</h1>
+<h2>Please Sign Up</h2>
+<form method="POST" action="/users">
+<input type="text" name="user[username]" placeholder="Username">
+<input type="password" name="user[password]" placeholder="Password">
+<input type="text" name="instrument[type]" placeholder="Instrument">
+<input type="submit" value="Sign Up">
+</form>
+<h2>Or Login</h2>
+<form method="POST" action="/login">
+<input type="text" name="username" placeholder="Username">
+<input type="password" name="password" placeholder="Password">
+<input type="submit" value="Log In">
+</form>
